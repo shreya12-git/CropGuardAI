@@ -1,0 +1,17 @@
+.each-slide-effect > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 100vh; /* Set the height to 100vh (100% of the viewport height) */
+  }
+  
+  .each-slide-effect span {
+    padding: 20px;
+    font-size: 70px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+  }
+
+  
