@@ -31,11 +31,7 @@ const BlogPagination = async ({ params }) => {
         <div className="container">
           {markdownify(title, "h1", "h1 text-center font-normal text-[56px]")}
           <Posts posts={currentPosts} />
-          <Pagination
-            section={blog_folder}
-            totalPages={totalPages}
-            currentPage={currentPage}
-          />
+
         </div>
       </section>
     </>

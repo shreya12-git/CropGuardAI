@@ -4,21 +4,24 @@ import Logo from "@components/Logo";
 import menu from "@config/menu.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import config from "../../config/config.json";
 
 const Header = () => {
   const pathname = usePathname();
 
-  // distructuring the main menu from menu object
+  // destructuring the main menu from the menu object
   const { main } = menu;
 
   // states declaration
   const [navOpen, setNavOpen] = useState(false);
+  const [translateOpen, setTranslateOpen] = useState(false);
 
   // logo source
   const { logo } = config.site;
   const { enable, label, link } = config.nav_button;
+
+
 
   return (
     <header className="header">
@@ -53,9 +56,7 @@ const Header = () => {
         {/* Menu */}
         <div
           id="nav-menu"
-          className={`order-3 md:order-1 ${
-            navOpen ? "max-h-[1000px]" : "max-h-0"
-          }`}
+          className={`order-3 md:order-1 ${navOpen ? "max-h-[1000px]" : "max-h-0"}`}
         >
           <ul className="navbar-nav block w-full md:flex md:w-auto lg:space-x-2">
             {main.map((menu, i) => (
@@ -71,10 +72,7 @@ const Header = () => {
                     <ul className="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
                       {menu.children.map((child, i) => (
                         <li className="nav-dropdown-item" key={`children-${i}`}>
-                          <Link
-                            href={child.url}
-                            className="nav-dropdown-link block"
-                          >
+                          <Link href={child.url} className="nav-dropdown-link block">
                             {child.name}
                           </Link>
                         </li>
@@ -86,9 +84,7 @@ const Header = () => {
                     <Link
                       href={menu.url}
                       onClick={() => setNavOpen(false)}
-                      className={`nav-link block ${
-                        pathname === menu.url ? "nav-link-active" : ""
-                      }`}
+                      className={`nav-link block ${pathname === menu.url ? "nav-link-active" : ""}`}
                     >
                       {menu.name}
                     </Link>
@@ -98,11 +94,7 @@ const Header = () => {
             ))}
             {enable && (
               <li className="md:hidden">
-                <Link
-                  className="btn btn-primary z-0 py-[14px]"
-                  href={link}
-                  rel=""
-                >
+                <Link className="btn btn-primary z-0 py-[14px]" href={link} rel="">
                   {label}
                 </Link>
               </li>

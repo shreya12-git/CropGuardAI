@@ -5,19 +5,19 @@
       "url": "/"
     },
     {
-      "name": "Blog",
+      "name": "Weather",
       "url": "/blogs"
     },
     {
-      "name": "Pricing",
+      "name": "Disease Detector",
       "url": "/pricing"
     },
     {
-      "name": "Contact",
+      "name": "Crop Recommender",
       "url": "/contact"
     },
     {
-      "name": "FAQ",
+      "name": "Chatbot",
       "url": "/faq"
     }
   ],

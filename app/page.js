@@ -1,5 +1,5 @@
 import config from "@config/config.json";
-import Cta from "@layouts/components/Cta";
+// import Cta from "@layouts/components/Cta";
 import SeoMeta from "@layouts/SeoMeta";
 
 import HomeBanner from "@layouts/partials/HomeBanner";
@@ -26,12 +26,20 @@ const Home = async () => {
 
       {/* services */}
       <Services services={services} />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
 
       {/* workflow */}
       {/* <Workflow workflow={workflow} /> */}
 
       {/* Cta */}
-      <Cta cta={call_to_action} />
+      {/* <Cta cta={call_to_action} /> */}
     </>
   );
 };

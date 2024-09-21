@@ -1,3 +1,4 @@
+
 import NotFound from "@layouts/404";
 import Contact from "@layouts/Contact";
 import Default from "@layouts/Default";
@@ -11,6 +12,7 @@ import SignUpPage from "@layouts/SignUpPage";
 
 // for all regular pages
 const RegularPages = async ({ params }) => {
+
   const { regular } = params;
   const regularPageData = await getRegularPage(regular);
   const { title, meta_title, description, image, noindex, canonical, layout } =

@@ -1,14 +1,5 @@
 {
-  "node": {
-    "6e6033b1e195cfd4cf000e5956dfd79558b19bd8": {
-      "workers": {
-        "app/[regular]/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Cshreya%20awasthi%5C%5CDesktop%5C%5Cbigspring-light-nextjs-main%5C%5Cnode_modules%5C%5C%40clerk%5C%5Cnextjs%5C%5Cdist%5C%5Cesm%5C%5Capp-router%5C%5Cserver-actions.js%22%2C%5B%22invalidateCacheAction%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/[regular]/page": "action-browser"
-      }
-    }
-  },
+  "node": {},
   "edge": {},
-  "encryptionKey": "iJQXykep2SJOh8J8VF/D0zz7fYnjzevK+4iWa1N2TGg="
+  "encryptionKey": "okRlI9k0jl+LtPgAFPJo2Ct34FlKX7/rOWeuAoaPiis="
 }

@@ -1,4 +1,4 @@
-// File: C:\Users\shreya awasthi\Desktop\bigspring-light-nextjs-main\app\page.js
+// File: C:\Users\shreya awasthi\Documents\GitHub\CropGuardAI\app\page.js
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -52,7 +52,7 @@ services:
     button:
       enable: true
       label: Check it out
-      link: /contact
+      link: /pricing
   
   - title: "WEATHER APP:"
     content: "The Smart Agriculture System's weather app delivers real-time local data and precise forecasts, empowering farmers to make informed decisions and adapt swiftly to changing conditions. By optimizing farming practices and minimizing risks from unpredictable weather, the system boosts productivity and ensures higher crop yields through customized, weather-driven adjustments."
@@ -62,7 +62,7 @@ services:
     button:
       enable: true
       label: Check it out
-      link: /contact
+      link: /blogs
 
   - title: "LOCAL LANGUAGE CHATBOT:"
     content: "The integrated local language chatbot serves as a lifeline for farmers, delivering real-time support in their native dialects. Offering personalized agricultural insights and guidance, it bridges the gap for tech-challenged users, ensuring everyone can access vital information. This tool revolutionizes communication, empowering farmers to optimize their practices and fostering a more inclusive, farmer-friendly agricultural ecosystem."
@@ -73,7 +73,7 @@ services:
     button:
       enable: true
       label: Check it out
-      link: /contact
+      link: /faq
 
 # workflow
 # workflow: 
@@ -83,11 +83,11 @@ services:
 
 # call_to_action
 call_to_action:
-  title: Ready to get started?
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur.
-  image: '/images/cta.svg'
-  button:
-    enable: true
-    label: "Contact Us"
-    link: "/contact"
+  # title: Ready to get started?
+  # content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur.
+  # image: '/images/cta.svg'
+  # button:
+  #   enable: true
+  #   label: "Contact Us"
+  #   link: "/contact"
 ---
