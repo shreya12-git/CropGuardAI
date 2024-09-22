@@ -1,6 +1,4 @@
 {
-  "/[regular]/page": "app/[regular]/page.js",
-  "/page": "app/page.js",
-  "/blogs/page/[slug]/page": "app/blogs/page/[slug]/page.js",
-  "/blogs/page": "app/blogs/page.js"
+  "/blogs/page": "app/blogs/page.js",
+  "/page": "app/page.js"
 }
