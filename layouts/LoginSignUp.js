@@ -1,83 +1,105 @@
-"use client"; 
+"use client"; // Mark this component as a client component
+
 import { useState } from 'react';
 
-export default function Auth() {
-  // State to track whether the user is on the 'login' or 'signup' form
+export default function AuthPage() {
+  // State to toggle between login and signup
   const [isLogin, setIsLogin] = useState(true);
 
-  // Toggle between login and signup
+  // Function to toggle between login and signup form
   const toggleForm = () => {
     setIsLogin(!isLogin);
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold text-center">
-          {isLogin ? 'Login' : 'Sign Up'}
-        </h2>
+    <div className="flex justify-center items-center h-screen ">
+      <div className="flex w-full max-w-4xl h-[600px] bg-white rounded-2xl shadow-2xl overflow-hidden">
+        {/* Left side: Image */}
+        <div className="w-1/2 hidden md:block">
+          <img
+            src="https://imgs.search.brave.com/8rZkUobJtTnRMJ2gLu14zvZeaYvHMbUzAcE-a2qcMfk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTY1/NjQ2NDg2L3Bob3Rv/L3JpY2UtaGFydmVz/dC5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9Q01kVE44ekFL/aU96QlZhY0xMOVNE/THYwREpWeWxLZ2p3/b05EWjhCeXkybz0" // Ensure the image is placed in the public folder or use a URL
+            alt="Crop field"
+            className="object-cover w-full h-full"
+          />
+        </div>
 
-        <form>
-          <div className="mb-4">
-            <label className="block text-sm font-medium">Email</label>
-            <input
-              type="email"
-              className="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
+        {/* Right side: Login/Signup form */}
+        <div className="w-full md:w-1/2 p-10 flex flex-col justify-center bg-gray-100">
+          <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-6">
+            {isLogin ? 'Welcome Back' : 'Create Account'}
+          </h2>
 
-          <div className="mb-4">
-            <label className="block text-sm font-medium">Password</label>
-            <input
-              type="password"
-              className="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
-              placeholder="Enter your password"
-              required
-            />
-          </div>
+          <p className="text-center text-gray-500 mb-6">
+            {isLogin
+              ? "Log in to continue where you left off."
+              : "Sign up to explore the platform."}
+          </p>
 
-          {/* Conditionally show confirm password field only for signup */}
-          {!isLogin && (
-            <div className="mb-4">
-              <label className="block text-sm font-medium">Confirm Password</label>
+          <form className="space-y-5">
+            <div>
+              <label className="block text-sm font-medium text-gray-600">Email</label>
               <input
-                type="password"
-                className="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
-                placeholder="Confirm your password"
+                type="email"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+                placeholder="Enter your email"
                 required
               />
             </div>
-          )}
 
-          <button className="w-full px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600">
-            {isLogin ? 'Login' : 'Sign Up'}
-          </button>
-        </form>
+            <div>
+              <label className="block text-sm font-medium text-gray-600">Password</label>
+              <input
+                type="password"
+                className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
 
-        <div className="text-sm text-center">
-          {isLogin ? (
-            <>
-              Don't have an account?{' '}
-              <button
-                onClick={toggleForm}
-                className="text-blue-500 focus:outline-none"
-              >
-                Sign up
-              </button>
-            </>
-          ) : (
-            <>
-              Already have an account?{' '}
-              <button
-                onClick={toggleForm}
-                className="text-blue-500 focus:outline-none"
-              >
-                Login
-              </button>
-            </>
-          )}
+            {/* Confirm Password field only shows on signup */}
+            {!isLogin && (
+              <div>
+                <label className="block text-sm font-medium text-gray-600">Confirm Password</label>
+                <input
+                  type="password"
+                  className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+                  placeholder="Confirm your password"
+                  required
+                />
+              </div>
+            )}
+
+            <button
+              className="w-full px-4 py-2 text-white font-semibold rounded-lg shadow-lg"
+              style={{ backgroundColor: 'rgb(136 196 49 / var(--tw-bg-opacity))' }}
+            >
+              {isLogin ? 'Login' : 'Sign Up'}
+            </button>
+          </form>
+
+          <div className="text-sm text-center mt-6">
+            {isLogin ? (
+              <>
+                Don't have an account?{' '}
+                <button
+                  onClick={toggleForm}
+                  className="text-blue-600 hover:text-blue-800 font-semibold focus:outline-none transition duration-200"
+                >
+                  Sign up
+                </button>
+              </>
+            ) : (
+              <>
+                Already have an account?{' '}
+                <button
+                  onClick={toggleForm}
+                  className="text-blue-600 hover:text-blue-800 font-semibold focus:outline-none transition duration-200"
+                >
+                  Login
+                </button>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </div>

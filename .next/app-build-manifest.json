@@ -23,6 +23,11 @@
       "static/css/app/[regular]/page.css",
       "static/chunks/app/[regular]/page.js"
     ],
+    "/blogs/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/blogs/page.js"
+    ],
     "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
